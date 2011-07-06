@@ -16,4 +16,4 @@ facedetector-standalone: facedetector-standalone.o
 	g++ $(INC) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	-rm FaceDetector.o facedetector.o facedetector facedetector-standalone
+	-rm facedetector.o facedetector facedetector-standalone.o facedetector-standalone

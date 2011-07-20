@@ -4,7 +4,7 @@
 #include <iostream>
 #include "Database.h"
 
-efj::Database efjdb("/afs/l2f.inesc-id.pt/home/david/robots/facedetect/scenario-3/all.dat");
+efj::Database efjdb("/afs/l2f.inesc-id.pt/home/david/robots/facedetect/scenario-2/all.dat");
 
 FaceDetector detector0(0, "/usr/share/opencv/haarcascades/haarcascade_frontalface_alt.xml");
 void f0() {

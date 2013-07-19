@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4 2011/07/22 14:47:21 david Exp $
+# $Id: Makefile,v 1.5 2013/07/19 09:48:28 david Exp $
 #
 # Copyright (C) 2008-2011 INESC ID Lisboa.
 #
@@ -17,17 +17,20 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 #
 # $Log: Makefile,v $
+# Revision 1.5  2013/07/19 09:48:28  david
+# Hackaton.
+#
 # Revision 1.4  2011/07/22 14:47:21  david
 # Minor cleanup.
 #
 #
 FACEDETECTOR_DIR = ${HOME}/workspace/facedetector 
 LIBEFJDIR = ${HOME}/workspace/efj
-EIGEN=/afs/l2f.inesc-id.pt/home/ferreira/face-recognition/eigen
+EIGEN=/usr/include/eigen3
 QTDIR=/usr/lib64/qt4
 
 LDFLAGS = -L$(FACEDETECTOR_DIR) -lfacedetector -L/usr/lib64 -lopencv_core -lopencv_highgui -lopencv_objdetect \
-	-L$(LIBEFJDIR) -lefj -lboost_filesystem -lQtGui -lgomp
+	-L$(LIBEFJDIR) -lefj -lboost_filesystem -lboost_system -lQtGui -lgomp
 
 INC=-I. -I$(FACEDETECTOR_DIR) -I$(LIBEFJDIR) -I/usr/include/opencv -I$(EIGEN) -I$(QTDIR)/include/QtCore -I$(QTDIR)/include/QtGui
 CXXFLAGS = -fPIC -fpic -std=c++0x

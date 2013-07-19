@@ -1,4 +1,4 @@
-// $Id: facedetector-and-id.cpp,v 1.4 2011/07/22 14:47:21 david Exp $
+// $Id: facedetector-and-id.cpp,v 1.5 2013/07/19 09:48:28 david Exp $
 //
 // Copyright (C) 2008-2011 INESC ID Lisboa.
 //
@@ -17,6 +17,9 @@
 // Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 //
 // $Log: facedetector-and-id.cpp,v $
+// Revision 1.5  2013/07/19 09:48:28  david
+// Hackaton.
+//
 // Revision 1.4  2011/07/22 14:47:21  david
 // Minor cleanup.
 //
@@ -32,12 +35,12 @@
 
 efj::Database efjdb("/afs/l2f.inesc-id.pt/home/david/robots/facedetect/scenario-2/all.dat");
 
-FaceDetector detector0(0, "/usr/share/opencv/haarcascades/haarcascade_frontalface_alt.xml");
+FaceDetector detector0(0, "/usr/share/OpenCV/haarcascades/haarcascade_frontalface_alt.xml");
 void f0() {
   detector0.StartFaceDetection(&efjdb);
 }
 
-FaceDetector detector1(1, "/usr/share/opencv/haarcascades/haarcascade_frontalface_alt.xml");
+FaceDetector detector1(1, "/usr/share/OpenCV/haarcascades/haarcascade_frontalface_alt.xml");
 void f1() {
   detector1.StartFaceDetection(&efjdb);
 }
